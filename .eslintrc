@@ -1,0 +1,23 @@
+{
+  "extends": "standard",
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "func-call-spacing": ["error", "never"],
+    "space-before-function-paren": ["error", {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+    }],
+    "no-underscore-dangle": 0,
+    "no-param-reassign": 0,
+    "no-plusplus": 0,
+    "no-console": 0,
+    "global-require": 0,
+    "max-len": 0
+  }
+}
