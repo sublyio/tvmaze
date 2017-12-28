@@ -1,7 +1,7 @@
 {
   "name": "@sublyhu/tvmaze",
   "version": "1.0.0",
-  "description": "TVmaze async service for local storage",
+  "description": "TVmaze asynchronous service for MongoDB. Store data locally.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -18,7 +18,6 @@
     "mongodb",
     "schema"
   ],
-  "author": "Tamás András Horváth <htomy92@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sublyhu/tvmaze/issues"
@@ -39,5 +38,10 @@
     "got": "^8.0.1",
     "mongoose": "^4.13.6",
     "mongoose-integer": "^0.1.1"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib",
+    "test": "test"
   }
 }
