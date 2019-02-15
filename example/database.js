@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 mongoose.plugin(require('mongoose-integer'));
 
 const mongoConf = {
-  useMongoClient: true,
   keepAlive: 1,
+  useNewUrlParser: true,
   authSource: process.env.MONGODB_AUTHSOURCE,
   user: process.env.MONGODB_USER,
   pass: process.env.MONGODB_PASS,

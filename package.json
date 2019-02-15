@@ -1,6 +1,6 @@
 {
   "name": "@sublyhu/tvmaze",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TVmaze asynchronous service for MongoDB. Store data locally.",
   "main": "index.js",
   "scripts": {
@@ -24,19 +24,19 @@
   },
   "homepage": "https://github.com/sublyhu/tvmaze#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "dotenv": "^4.0.0",
-    "eslint": "^4.13.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "mocha": "^4.0.1"
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.13.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
-    "got": "^8.0.1",
-    "mongoose": "^4.13.6",
+    "got": "^9.6.0",
+    "mongoose": "^5.4.12",
     "mongoose-integer": "^0.1.1"
   },
   "directories": {

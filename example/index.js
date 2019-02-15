@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '../.env' });
 
 const connectedDb = require('./database').connected;
 const Tvmaze = require('../lib/main');
