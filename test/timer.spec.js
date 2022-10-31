@@ -1,5 +1,4 @@
-const expect = require('chai').expect;
-const timer = new Timer();
+const timer = new timer();
 
 describe('Timer', () => {
   before(() => {

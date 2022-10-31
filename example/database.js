@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import { plugin, createConnection } from 'mongoose';
 
-mongoose.plugin(require('mongoose-integer'));
+plugin(require('mongoose-integer'));
 
 const mongoConf = {
   keepAlive: 1,
@@ -16,12 +16,10 @@ if (process.env.MONGODB_AUTH_ENABLE !== 'true') {
   delete mongoConf.pass;
 }
 
-async function mongodb(cb) {
-  mongoose.Promise = global.Promise;
-
-  global.db = await mongoose.createConnection(process.env.MONGODB_URI, mongoConf);
+function mongodb(cb) {
+  global.db = createConnection(process.env.MONGODB_URI, mongoConf);
 
   cb(global.db);
 }
 
-module.exports.connected = mongodb;
+export const connected = mongodb;

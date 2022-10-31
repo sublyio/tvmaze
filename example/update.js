@@ -1,7 +1,7 @@
 require('dotenv').config({ path: '../.env' });
 
-const connectedDb = require('./database').connected;
-const Tvmaze = require('../lib/main');
+import { connected as connectedDb } from './database';
+import Tvmaze from '../lib/main';
 
 connectedDb(async (db) => {
   const tvmaze = new Tvmaze(db, {
