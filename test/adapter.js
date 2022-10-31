@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const TvmazeAdapter = require('../lib/adapter');
+import { expect } from 'chai';
+import TvmazeAdapter from '../lib/adapter';
 const adapter = new TvmazeAdapter();
 
 describe('TVmaze Adapter', () => {

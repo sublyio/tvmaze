@@ -1,4 +1,4 @@
-const Timer = require('../lib/timer');
+import Timer from '../lib/timer';
 
 const timer = new Timer();
 
