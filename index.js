@@ -1,1 +1,1 @@
-export { default } from "./lib/main";
+export { Tvmaze } from "./lib/Tvmaze";

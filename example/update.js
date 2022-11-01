@@ -1,25 +1,28 @@
-require('dotenv').config({ path: '../.env' });
+import dotenv from 'dotenv'
+import database from './database'
+import Tvmaze from '../lib/Tvmaze'
 
-import { connected as connectedDb } from './database';
-import Tvmaze from '../lib/main';
+dotenv.config({
+  path: '../.env'
+})
 
-connectedDb(async (db) => {
+database(async (db) => {
   const tvmaze = new Tvmaze(db, {
     silent: false,
-  });
+  })
 
   // Save all-in
-  await tvmaze.update();
+  await tvmaze.update()
 
-  console.log('Update method complete');
+  console.log('Update method complete')
 
   // Close database connection (optional)
-  db.base.disconnect();
-});
+  db.base.disconnect()
+})
 
 /**
 * For [DEP0018] DeprecationWarning
 */
 process.on('unhandledRejection', (error) => {
-  console.log(error.message);
-});
+  console.log(error.message)
+})
