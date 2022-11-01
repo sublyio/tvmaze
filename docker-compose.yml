@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    env_file: .env
+    volumes:
+      - ./docker/data/mongo:/etc/mongo
+      - ./docker/config/mongo/mongod.conf:/etc/mongo/mongod.conf
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    env_file: .env
+
+  webapp:
+    build:
+      context: .
+      dockerfile: docker/config/webapp/Dockerfile
+    volumes:
+      - .:/app
+    env_file: .env
+    depends_on:
+      - db

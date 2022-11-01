@@ -21,11 +21,18 @@ The method runs on all `shows` pages, then the received series and their episode
 Please note that the calculation of queries **(20 calls every 10 seconds per IP address)** is limited to this package and wait 10 seconds after restarting.
 
 ## Statistics
-~ 32.874 series (~ 41 mb)  
-~ 1.284.987 episodes (~ 515 mb)  
-~ 7.75 hours the full download time  
+~ 32.874 series (~ 41 mb)
+~ 1.284.987 episodes (~ 515 mb)
+~ 7.75 hours the full download time
 
 It is constantly expanding.
+
+## Use with Docker
+
+Build docker image and run services
+```
+docker-composer up -d
+```
 
 ## License
 MIT

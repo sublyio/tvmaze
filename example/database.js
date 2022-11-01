@@ -1,25 +1,26 @@
-import { plugin, createConnection } from 'mongoose';
+import { plugin, createConnection } from 'mongoose'
+import mongooseInteger from 'mongoose-integer'
 
-plugin(require('mongoose-integer'));
+plugin(mongooseInteger)
 
 const mongoConf = {
-  keepAlive: 1,
+  keepAlive: true,
   useNewUrlParser: true,
   authSource: process.env.MONGODB_AUTHSOURCE,
   user: process.env.MONGODB_USER,
   pass: process.env.MONGODB_PASS,
-};
+}
 
 if (process.env.MONGODB_AUTH_ENABLE !== 'true') {
-  delete mongoConf.authSource;
-  delete mongoConf.user;
-  delete mongoConf.pass;
+  delete mongoConf.authSource
+  delete mongoConf.user
+  delete mongoConf.pass
 }
 
-function mongodb(cb) {
-  global.db = createConnection(process.env.MONGODB_URI, mongoConf);
+const database = function(cb) {
+  global.db = createConnection(process.env.MONGODB_URI, mongoConf)
 
-  cb(global.db);
+  cb(global.db)
 }
 
-export const connected = mongodb;
+export default database
